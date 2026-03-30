@@ -20,7 +20,7 @@ while bucle:
         print('\n=====================================================================================\n')
         print('1. Crear usuario')
         print('2. Mostrar usuarios')
-        print('3. Modificar datos de un usuario')
+        print('3. Modificar email de un usuario')
         print('4. Salir')
         opcion = int(input('Seleccione la accion a realizar: '))
         print('\n=====================================================================================\n')
@@ -53,11 +53,11 @@ while bucle:
             break
         else:
             raise ValueError('OPCION INCORRECTA, SELECCIONE UNA OPCION VALIDA')
-    except ValueError as a:
+    except ValueError as a: # Errores de validacion
         print(f'\n======= ERROR: {a} =======')
-    except Exception as e:
+    except Exception as e: # Cualquier otro tipo de error inesperado
         print(f'\n======= ERROR INESPEDADO: {e} =======')
     else:
         print('\n======= EJECUCION EXITOSA =======')
-    finally: 
+    finally: # Siempre se ejecuta
         print('\n======= FINALY =======')
